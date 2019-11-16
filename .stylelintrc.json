@@ -1,9 +1,6 @@
 {
   "extends": [
-    "stylelint-config-recommended-scss"
-  ],
-  "plugins": [
-    "stylelint-order"
+    "stylelint-config-strict-scss"
   ],
   "class-name-format": [
     1,
@@ -24,6 +21,14 @@
       "custom-properties",
       "declarations"
     ],
-    "order/properties-alphabetical-order": true
+    "order/properties-alphabetical-order": true,
+    "scss/at-mixin-named-arguments": [
+      "always",
+      {
+        "ignore": [
+          "single-argument"
+        ]
+      }
+    ]
   }
 }

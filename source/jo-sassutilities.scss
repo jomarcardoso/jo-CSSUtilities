@@ -1,5 +1,6 @@
-@import '../node_modules/jo-cssresets/dist/css/resets';
+$color-primary: lightblue;
 
+@import '../node_modules/jo-cssresets/dist/css/resets';
 @import './utilities/utilities';
 
 .arrow-down {
@@ -12,12 +13,13 @@
   width: 200px;
 
   &__option {
-    @include roulette-wheel(6);
     align-items: center;
-    background-color: lightblue;
+    background-color: $color-primary;
     border: 2px solid black;
     display: flex;
     font-size: 28px;
     justify-content: center;
+
+    @include roulette-wheel(6);
   }
 }

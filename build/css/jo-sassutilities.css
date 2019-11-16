@@ -261,10 +261,10 @@ label {
 }
 /*# sourceMappingURL=maps/resets.css.map */
 .arrow-down {
+  border: 6px solid transparent;
   display: inline-flex;
   height: 6px;
   width: 6px;
-  border: 6px solid transparent;
   border-top-color: currentColor;
 }
 
@@ -274,18 +274,22 @@ label {
   width: 200px;
 }
 .roulette-wheel__option {
-  width: 50%;
-  height: 50%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  transform-origin: 100% 100%;
+  align-items: center;
   background-color: lightblue;
   border: 2px solid black;
   display: flex;
   font-size: 28px;
   justify-content: center;
-  align-items: center;
+  height: 50%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform-origin: 100% 100%;
+  width: 50%;
+}
+.roulette-wheel__option > * {
+  display: block;
+  transform: skew(-30deg) rotate(222deg);
 }
 .roulette-wheel__option:nth-child(1) {
   transform: rotate(60deg) skew(30deg);
@@ -310,10 +314,6 @@ label {
 .roulette-wheel__option:nth-child(6) {
   transform: rotate(360deg) skew(30deg);
   z-index: 7;
-}
-.roulette-wheel__option > * {
-  display: block;
-  transform: skew(-30deg) rotate(222deg);
 }
 
 /*# sourceMappingURL=jo-sassutilities.css.map */
