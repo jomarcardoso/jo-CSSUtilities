@@ -1,0 +1,23 @@
+@import '../node_modules/jo-cssresets/dist/css/resets';
+
+@import './utilities/utilities';
+
+.arrow-down {
+  @include arrow-down(6px);
+}
+
+.roulette-wheel {
+  height: 200px;
+  position: relative;
+  width: 200px;
+
+  &__option {
+    @include roulette-wheel(6);
+    align-items: center;
+    background-color: lightblue;
+    border: 2px solid black;
+    display: flex;
+    font-size: 28px;
+    justify-content: center;
+  }
+}

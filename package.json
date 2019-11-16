@@ -1,0 +1,29 @@
+{
+  "name": "jo-cssutilities",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "sass --style=expanded --watch --color source:build/css",
+    "build": "sass --style=compressed --color source:build/css",
+    "lint": "stylelint source/**/*.scss"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jomarcardoso/jo-CSSUtilities.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jomarcardoso/jo-CSSUtilities/issues"
+  },
+  "homepage": "https://github.com/jomarcardoso/jo-CSSUtilities#readme",
+  "devDependencies": {
+    "jo-cssresets": "^7.1.0",
+    "sass": "^1.23.3",
+    "stylelint": "^11.1.1",
+    "stylelint-config-recommended-scss": "^4.0.0",
+    "stylelint-order": "^3.1.1",
+    "stylelint-scss": "^3.12.1"
+  }
+}

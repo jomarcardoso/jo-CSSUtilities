@@ -1,0 +1,53 @@
+// ARROW
+@mixin arrow($size) {
+  border: $size solid transparent;
+  display: inline-flex;
+  height: $size;
+  width: $size;
+}
+
+@mixin arrow-up($size) {
+  @include arrow($size);
+  border-bottom-color: currentColor;
+}
+
+@mixin arrow-down($size) {
+  @include arrow($size);
+  border-top-color: currentColor;
+}
+
+@mixin arrow-left($size) {
+  @include arrow($size);
+  border-right-color: currentColor;
+}
+
+@mixin arrow-right($size) {
+  @include arrow($size);
+  border-right-color: currentColor;
+}
+
+// ROULETE WHEEL
+@mixin roulette-wheel($quantity) {
+  $angle: (360deg / $quantity);
+  $skew: 45deg + (45deg - $angle);
+  height: 50%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform-origin: 100% 100%;
+
+  width: 50%;
+
+  @for $i from 1 through $quantity {
+    &:nth-child(#{$i}) {
+      transform: rotate($angle * $i) skew($skew);
+      z-index: $i + 1;
+
+    }
+  }
+
+  & > * {
+    display: block;
+    transform: skew(-$skew) rotate(222deg);
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "extends": [
+    "stylelint-config-recommended-scss"
+  ],
+  "plugins": [
+    "stylelint-order"
+  ],
+  "class-name-format": [
+    1,
+    {
+      "convention": "strictbem"
+    }
+  ],
+  "rules": {
+    "selector-type-no-unknown": [
+      true,
+      {
+        "ignoreTypes": [
+          "amp-img"
+        ]
+      }
+    ],
+    "order/order": [
+      "custom-properties",
+      "declarations"
+    ],
+    "order/properties-alphabetical-order": true
+  }
+}
