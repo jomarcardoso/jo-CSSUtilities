@@ -5,8 +5,10 @@ $fontsize-title: 28px;
 @import '../node_modules/jo-cssresets/dist/css/resets';
 @import './utilities/utilities';
 
+$seispx: 6px;
+
 .a-arrow-down {
-  @include arrow-down(6px);
+  @include arrow-down($seispx);
 }
 
 .m-roulette-wheel {
