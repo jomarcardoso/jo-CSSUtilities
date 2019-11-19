@@ -2,6 +2,9 @@
   "extends": [
     "stylelint-config-strict-scss"
   ],
+  "plugins": [
+    "@namics/stylelint-bem"
+  ],
   "class-name-format": [
     1,
     {
@@ -9,6 +12,23 @@
     }
   ],
   "rules": {
+    "color-format/format": {
+      "format": "hsl"
+    },
+    "color-named": "always-where-possible",
+    "plugin/stylelint-bem-namics": {
+      "patternPrefixes": [
+        "a",
+        "m",
+        "o",
+        "t",
+        "p"
+      ],
+      "helperPrefixes": [
+        "is",
+        "has"
+      ]
+    },
     "selector-type-no-unknown": [
       true,
       {

@@ -1,13 +1,15 @@
 $color-primary: lightblue;
+$color-dark: black;
+$fontsize-title: 28px;
 
 @import '../node_modules/jo-cssresets/dist/css/resets';
 @import './utilities/utilities';
 
-.arrow-down {
+.a-arrow-down {
   @include arrow-down(6px);
 }
 
-.roulette-wheel {
+.m-roulette-wheel {
   height: 200px;
   position: relative;
   width: 200px;
@@ -15,9 +17,9 @@ $color-primary: lightblue;
   &__option {
     align-items: center;
     background-color: $color-primary;
-    border: 2px solid black;
+    border: 2px solid $color-dark;
     display: flex;
-    font-size: 28px;
+    font-size: $fontsize-title;
     justify-content: center;
 
     @include roulette-wheel(6);

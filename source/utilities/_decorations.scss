@@ -42,7 +42,7 @@
   transform-origin: 100% 100%;
   width: 50%;
 
-  > * {
+  > * { /* stylelint-disable-line plugin/stylelint-bem-namics */
     display: block;
     transform: skew(-$skew) rotate(222deg);
   }
